@@ -29,7 +29,7 @@ export function combinarDosArrays(arrA, arrB) {
         }
     }
 
-    while (j < arrA.length){
+    while (i < arrA.length){
         if (res.length === 0 || res[res.length -1] !== arrA[i]){
             res.push(arrA[i])
         }
