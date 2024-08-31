@@ -4,7 +4,46 @@
  * @param {number[]} arrB otro array de números ordenados
  * @returns {number[]} un nuevo array de números ordenados
  */
-function combinarDosArrays(arrA, arrB) {
+export function combinarDosArrays(arrA, arrB) {
+    const res = []
+    let i = 0
+    let j = 0
+
+    while(i < arrA.length && j < arrB.length) {
+        if (arrA[i] < arrB[j]){
+            if (res.length === 0 || res[res.length -1] !== arrA[i]){
+                res.push(arrA[i])
+            }
+            i++
+        } else if(arrA[i] > arrB[j]){
+            if(res.length === 0 || res[res.length -1] !== arrB[j]){
+               res.push(arrB[j]) 
+            }
+            j++
+        } else {
+            if(res.length === 0 || res[res.length -1] !== arrA[i]){
+                res.push(arrA[i])
+            }
+            i++
+            j++
+        }
+    }
+
+    while (j < arrA.length){
+        if (res.length === 0 || res[res.length -1] !== arrA[i]){
+            res.push(arrA[i])
+        }
+        i++
+    }
+
+    while (j < arrB.length){
+        if (res.length === 0 || res[res.length -1] !== arrB[j]){
+            res.push(arrB[j])
+        }
+        j++
+    }
+
+    return res
 }
 
 /**
@@ -12,7 +51,17 @@ function combinarDosArrays(arrA, arrB) {
  * @param {number[][]} arrs el array de arrays de números que quiero combinar
  * @returns {number[]} el nuevo array de números ordenados
  */
-function combinarNArrays(arrs) {
+export function combinarNArrays(arrs) {
+    if (arrs.length == 0) return []
+    if (arrs.length == 1) return arrs[0]
+
+    let res = arrs[0]
+
+    for (let i = 1; i < arrs.length; i++){
+        res = combinarDosArrays(res, arrs[i])
+    }
+
+    return res
 }
 
 // exportar ambas funciones

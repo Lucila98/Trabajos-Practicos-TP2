@@ -1,10 +1,14 @@
 {
   "type": "module",
   "name": "01-tp-manejo-de-archivos",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "main.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon index.js",
+    "test": ""
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
