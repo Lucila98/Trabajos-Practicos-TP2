@@ -1,0 +1,18 @@
+{
+	"contenidoStr": "{\n  \"type\": \"module\",\n  \"name\": \"02-tp-filesystem-sync-async\",\n  \"version\": \"0.0.1\",\n  \"description\": \"trabajo practico n2\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"start\": \"node index.js\",\n    \"watch\": \"nodemon index.js\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\"\n}\n",
+	"contenidoObj": {
+		"type": "module",
+		"name": "02-tp-filesystem-sync-async",
+		"version": "0.0.1",
+		"description": "trabajo practico n2",
+		"main": "index.js",
+		"scripts": {
+			"test": "echo \"Error: no test specified\" && exit 1",
+			"start": "node index.js",
+			"watch": "nodemon index.js"
+		},
+		"author": "",
+		"license": "ISC"
+	},
+	"size": 325
+}
